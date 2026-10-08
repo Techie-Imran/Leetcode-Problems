@@ -9,6 +9,6 @@ class Solution:
         k %= n
         if n < 2 or k == 0:
             return
-        self.cycle(nums, 0, n-1)
-        self.cycle(nums, 0, k-1)
-        self.cycle(nums, k, n-1)
+        self.cycle(nums, 0, n-1) #[7,6,5,4,3,2,1]
+        self.cycle(nums, 0, k-1) #[5,6,7,4,3,2,1]
+        self.cycle(nums, k, n-1) #[5,6,7,1,2,3,4]
