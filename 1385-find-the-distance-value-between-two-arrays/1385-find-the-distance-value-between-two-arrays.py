@@ -7,6 +7,7 @@ class Solution:
             for i in range(len(arr2)):
                 if(abs(arr1[j]-arr2[i]) <= d):
                     res = False
+                    break
             if res:
                 cnt += 1
             j -= 1
