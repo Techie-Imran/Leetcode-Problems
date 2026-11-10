@@ -6,4 +6,3 @@ class Solution:
             return float(merge_list[n//2])
         else:
             return float(merge_list[n//2] + merge_list[n//2 - 1]) / 2.0
-        return res
