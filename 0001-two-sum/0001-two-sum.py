@@ -6,3 +6,4 @@ class Solution:
             if diff in seen:
                 return [seen[diff], i]
             seen[num] = i
+        return
