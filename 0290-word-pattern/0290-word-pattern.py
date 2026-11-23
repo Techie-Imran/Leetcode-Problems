@@ -3,16 +3,16 @@ class Solution:
         word = s.split()
         if len(pattern) != len(word):
             return False
-        seen_p = {}
-        seen_w = {}
-        for char, word in zip(pattern, word):
-            if char not in seen_p:
-                if word not in seen_w:
-                    seen_p[char] = word
-                    seen_w[word] = char
+        ch_word = {}
+        word_ch = {}
+        for c, w in zip(pattern, word):
+            if c not in ch_word:
+                if w not in word_ch:
+                    ch_word[c] = w
+                    word_ch[w] = c
                 else:
                     return False
             else:
-                if seen_p[char] != word:
+                if ch_word[c] != w:
                     return False
         return True
