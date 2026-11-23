@@ -1,10 +1,10 @@
 class Solution:
     def threeSum(self, nums: list[int]) -> list[list[int]]:
-        nums.sort()
         n = len(nums)
-        answer = []
         if not nums or n < 3:
-            return answer
+            return []
+        nums.sort()
+        answer = []
         for i in range(n-2):
             if nums[i] > 0:
                 break
