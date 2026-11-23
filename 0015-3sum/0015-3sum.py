@@ -1,8 +1,8 @@
 class Solution:
     def threeSum(self, nums: list[int]) -> list[list[int]]:
-        n = len(nums)
-        if not nums or n < 3:
+        if not nums or len(nums) < 3:
             return []
+        n = len(nums)
         nums.sort()
         answer = []
         for i in range(n-2):
