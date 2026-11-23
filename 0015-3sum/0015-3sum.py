@@ -3,6 +3,8 @@ class Solution:
         nums.sort()
         n = len(nums)
         answer = []
+        if not nums or n < 3:
+            return answer
         for i in range(n-2):
             if nums[i] > 0:
                 break
