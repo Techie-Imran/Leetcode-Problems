@@ -3,9 +3,10 @@ class Solution:
         if n < 10:
             return False
         cnt = 1
-        tot = 10
-        while tot > 0 and n-tot >= 0:
-            n -= tot
-            tot -= 1
-            cnt += 1
+        for i in range(10, -1, -1):
+            if n-i >= 0:
+                n -= i
+                cnt += 1
+            else:
+                break
         return cnt %2 == 0
