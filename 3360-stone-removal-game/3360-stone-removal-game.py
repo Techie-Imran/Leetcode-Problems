@@ -1,6 +1,9 @@
 class Solution:
     def canAliceWin(self, n: int) -> bool:
-        for i in range(10, 0, -1):
-            if n < i:
-                return i%2 != 0
-            n -= i
+        cnt = 0
+        tot = 10
+        while n-tot >= 0:
+            n -= tot
+            tot -= 1
+            cnt += 1
+        return cnt %2 == 1
